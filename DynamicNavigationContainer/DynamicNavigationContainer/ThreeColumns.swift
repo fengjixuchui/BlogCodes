@@ -30,6 +30,7 @@ struct ThreeColumnsView: View {
                         }
                     }
                 }
+                .id(store.contentID)
                 .overlay {
                     if store.contentID == nil {
                         Text("Empty")
@@ -42,6 +43,7 @@ struct ThreeColumnsView: View {
                     Text("Empty")
                 }
             })
+            .navigationSplitViewStyle(.balanced)
             HStack {
                 Button("Back Root") {
                     store.backRoot()
